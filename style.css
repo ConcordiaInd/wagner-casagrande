@@ -140,6 +140,23 @@ display: flex !important;
     border-style: none;
     border-radius: 50px;
 }
+.button{
+    background-color: #fbc379;
+
+    color: #442A05;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 16px;
+    text-decoration: none;
+
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    border-radius: 50px;
+}
 .footer{
     background-color: #012340;
 }
