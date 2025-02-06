@@ -386,21 +386,88 @@
                 <div class="col-lg-6">
                     <h2 class="titulo text-center mb-4">Contato</h2>
                     <p class="corpoDoTexto text-center">Entre em contato para receber informações sobre o livro “Os três pilares da vida e a energia do dinheiro” e o workshop de Wagner Casagrande.</p>
-                    <form>
+                    
+                    <form id="meuFormulario" action="https://script.google.com/macros/s/AKfycbw82PtBUUcH5BYpyHJFywfvgS2rSicUtsY9SaeNsnxPSs7YY8K5bSFtW34kCo6aGKCP/exec">
                         <div class="corpoDoTexto mb-3">
-                            <input type="text" class="form-control" placeholder="Nome">
+                            <input type="text" class="form-control" placeholder="Nome" name="Nome" required>
                         </div>
                         <div class="corpoDoTexto mb-3">
-                            <input type="text" class="form-control" placeholder="Função">
+                            <input type="text" class="form-control" placeholder="Função" name="Funcao" required>
                         </div>
                         <div class="corpoDoTexto mb-3">
-                            <input type="tel" class="form-control" placeholder="Telefone">
+                            <input type="tel" class="form-control" placeholder="Telefone" name="Telefone" required>
                         </div>
                         <div class="corpoDoTexto mb-3">
-                            <input type="email" class="form-control" placeholder="E-mail">
+                            <input type="email" class="form-control" placeholder="E-mail" name="Email" required>
                         </div>
                         <button type="submit" class="corpoDoTexto btn btn-primary w-100">Enviar</button>
                     </form>
+                    
+                    <!-- Popup de feedback -->
+                    <div id="popup" style="display: none; position: fixed; top: 20px; right: 20px; background: #4CAF50; color: white; padding: 15px; border-radius: 5px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); z-index: 1000; animation: slideIn 0.5s ease-out;">
+                        Dados enviados com sucesso!
+                    </div>
+
+                    <style>
+                        @keyframes slideIn {
+                            from { right: -300px; opacity: 0; }
+                            to { right: 20px; opacity: 1; }
+                        }
+                    </style>
+
+                    <script>
+                        // Função para mostrar o popup
+                        function mostrarPopup(mensagem, tipo) {
+                            const popup = document.getElementById('popup');
+                            popup.textContent = mensagem;
+                            popup.style.backgroundColor = tipo === 'success' ? '#4CAF50' : '#f44336';
+                            popup.style.display = 'block';
+
+                            setTimeout(() => {
+                                popup.style.display = 'none';
+                            }, 3000);
+                        }
+
+                        // Evento de submit do formulário
+                        document.getElementById('meuFormulario').addEventListener('submit', async (e) => {
+                            e.preventDefault();
+                            
+                            const form = e.target;
+                            const btnSubmit = form.querySelector('button[type="submit"]');
+
+                            try {
+                                btnSubmit.innerHTML = 'Enviando...';
+                                btnSubmit.disabled = true;
+
+                                const formData = new FormData(form);
+                                const url = form.getAttribute('action');
+
+                                const response = await fetch(url, {
+                                    method: 'POST',
+                                    headers: {
+                                        'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+                                    },
+                                    body: new URLSearchParams(formData)
+                                });
+
+                                const result = await response.text();
+
+                                if (result.toLowerCase().includes("success")) {
+                                    form.reset();
+                                    mostrarPopup('Dados enviados com sucesso!', 'success');
+                                } else {
+                                    throw new Error(result);
+                                }
+
+                            } catch (error) {
+                                console.error("Erro:", error);
+                                mostrarPopup('Erro ao enviar. Tente novamente.', 'error');
+                            } finally {
+                                btnSubmit.innerHTML = 'Enviar';
+                                btnSubmit.disabled = false;
+                            }
+                        });
+                    </script>
                 </div>
             </div>
         </div>
