@@ -184,7 +184,9 @@ display: flex !important;
     height: auto;
     border-radius: 5px;
 }
-
+.workshop{
+    margin-bottom: 50px;
+}
 @media (max-width: 992px) { /* Ajuste conforme necessário */
     .navbar-nav{ 
         display: none !important;
