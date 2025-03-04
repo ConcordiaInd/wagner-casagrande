@@ -1,0 +1,146 @@
+<div class="page-contato">
+
+    <!-- Paragrafo animado -->
+    <section id="social" class="section-padding bgimg01">
+        <div class="container">
+            <div class="box-contato">
+                <h1 class="tituloAlternativo">Conte com a ajuda necessária para alcançar seus objetivos.</h1>
+                <h1 class=""><a class="mail-contato corpoDoTextoAlternativo" href="mailto:contato@wagnercasagrande.com.br">contato@wagnercasagrande.com.br</a></h1>
+                <div class="redes">
+                    <a href="https://www.instagram.com/wagnercasa/" target="_blank"><img src="img/instagram-svgrepo-com 1.svg" height="30px" width="auto" alt="Link para o Instagram de Wagner Casagrande"></a>
+                    <a href="https://www.linkedin.com/in/wagner-casagrande-6458b1a8/" target="_blank"><img src="img/linkedin-svgrepo-com 1.svg" height="30px" width="auto" alt="Link para o LinkedIn de Wagner Casagrande"></a>
+                    <a href="https://www.facebook.com/wagnerdenovo?mibextid=wwXIfr&rdid=7srSYOzBoE5E9Cfk&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1KodCtKRQ4%2F%3Fmibextid%3DwwXIfr#" target="_blank"><img src="img/facebook-svgrepo-com 1.svg" height="30px" width="auto" alt="Link para o facebook de Wagner Casagrande"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact
+    <section id="contato" class="section-padding bgimg02 box-contato">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 justify-content-center">
+                    <h1 class="tituloAlternativo text-center mb-4">Contato</h1>
+                    <p class="corpoDoTextoAlternativo text-center">Entre em contato para receber informações sobre o livro “Os três pilares da vida e a energia do dinheiro” e o workshop de Wagner Casagrande.</p>
+                    <form id="meuFormulario" class="margem-100" action="https://formsubmit.co/contato@wagnercasagrande.com.br" method="POST" enctype="multipart/form-data" data-form>
+                        <div class="corpoDoTexto mb-3">
+                            <input type="text" class="form-control" placeholder="Nome" name="name" required>
+                        </div>
+                        <div class="corpoDoTexto mb-3">
+                            <input type="text" class="form-control" placeholder="Função" name="_function">
+                        </div>
+                        <div class="corpoDoTexto mb-3">
+                            <input type="email" class="form-control" placeholder="E-mail" name="email" required>
+                        </div>
+                        <div class="corpoDoTexto mb-3">
+                            <input type="tel" class="form-control" placeholder="Telefone" name="phone" required>
+                        </div>
+                        <input type="hidden" name="_captcha" value="false">
+
+                        <button type="submit" class="corpoDoTexto btn-form btn-primary w-100" data-button >Enviar</button>
+                    </form>
+                    
+                    Popup de feedback 
+                    <div id="popup" style="display: none; position: fixed; top: 20px; right: 20px; background: #4CAF50; color: white; padding: 15px; border-radius: 5px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); z-index: 1000; animation: slideIn 0.5s ease-out;">
+                        Dados enviados com sucesso!
+                    </div>
+
+                    <style>
+                        @keyframes slideIn {
+                            from { right: -300px; opacity: 0; }
+                            to { right: 20px; opacity: 1; }
+                        }
+                    </style>
+                    <script>
+                        class FormSubmit {
+                        constructor(settings) {
+                            this.settings = settings;
+                            this.form = document.querySelector(settings.form);
+                            this.formButton = document.querySelector(settings.button);
+                            if (this.form) {
+                            this.url = this.form.getAttribute("action");
+                            }
+                            this.sendForm = this.sendForm.bind(this);
+                        }
+
+                        displaySuccess() {
+                            this.form.innerHTML = this.settings.success;
+                        }
+
+                        displayError() {
+                            this.form.innerHTML = this.settings.error;
+                        }
+
+                        getFormObject() {
+                            const formObject = {};
+                            const fields = this.form.querySelectorAll("[name]");
+                            fields.forEach((field) => {
+                            formObject[field.getAttribute("name")] = field.value;
+                            });
+                            return formObject;
+                        }
+
+                        onSubmission(event) {
+                            event.preventDefault();
+                            event.target.disabled = true;
+                            event.target.innerText = "Enviando...";
+                        }
+
+                        async sendForm(event) {
+                            try {
+                            this.onSubmission(event);
+                            await fetch(this.url, {
+                                method: "POST",
+                                headers: {
+                                "Content-Type": "application/json",
+                                Accept: "application/json",
+                                },
+                                body: JSON.stringify(this.getFormObject()),
+                            });
+                            this.displaySuccess();
+                            } catch (error) {
+                            this.displayError();
+                            throw new Error(error);
+                            }
+                        }
+
+                        init() {
+                            if (this.form) this.formButton.addEventListener("click", this.sendForm);
+                            return this;
+                        }
+                        }
+
+                        const formSubmit = new FormSubmit({
+                        form: "[data-form]",
+                        button: "[data-button]",
+                        success: "<h1 class='success'>Mensagem enviada!</h1>",
+                        error: "<h1 class='error'>Não foi possível enviar sua mensagem.</h1>",
+                        });
+                        formSubmit.init();
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>  -->
+
+    <!-- Social 
+    <section id="social" class="section-padding box-contato">
+        <div class="container">
+            <div class="row big-card ">
+                <div class="col-lg-6">
+                    <h1 class="titulo">Conecte-se!</h1>
+                    <p class="corpoDoTexto">Siga Wagner Casagrande nas redes sociais.</p>
+                    <div class="redes">
+                        <a href="https://www.instagram.com/wagnercasa/" target="_blank"><img src="img/instagram-svgrepo-com 1.svg" height="15px" width="auto" alt="Link para o Instagram de Wagner Casagrande"></a>
+                        <a href="https://www.linkedin.com/in/wagner-casagrande-6458b1a8/" target="_blank"><img src="img/linkedin-svgrepo-com 1.svg" height="15px" width="auto" alt="Link para o LinkedIn de Wagner Casagrande"></a>
+                        <a href="https://www.facebook.com/wagnerdenovo?mibextid=wwXIfr&rdid=7srSYOzBoE5E9Cfk&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1KodCtKRQ4%2F%3Fmibextid%3DwwXIfr#" target="_blank"><img src="img/facebook-svgrepo-com 1.svg" height="15px" width="auto" alt="Link para o facebook de Wagner Casagrande"></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 g-6">
+                    <img src="img/socialHand.png" class="img-fluid" alt=""> 
+                </div>
+            </div>
+        </div>
+    </section> -->
+    
+</div>
