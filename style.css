@@ -4,7 +4,7 @@
     font-family: "Bellefair", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 12vh;
+    font-size: 10vh;
     color: #442A05;
 }
 .mail-contato{
@@ -230,8 +230,12 @@ color: #012340;
     padding-right: 10%;
     display: flex;
     justify-items: center;
+    align-items: center;
 }
 .hero-section {
+    display: flex;
+    align-items: center;
+    justify-items: center;
     width: 100%; /* Ocupa 100% da largura da tela */
     height: 100vh; /* Ocupa 100% da altura da tela */
     background-color: #ffffff;
