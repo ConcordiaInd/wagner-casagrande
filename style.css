@@ -375,7 +375,14 @@ display: flex !important;
     background-color: #012340;
 }
 .identidade{
-    color: #ffffff;
+    color: #fbc379;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: light;
+}
+.funcao{
+    color: #00c5c9;
     font-family: "Montserrat", serif;
     font-optical-sizing: auto;
     font-weight: 300;
@@ -394,7 +401,7 @@ display: flex !important;
 .perfil{
     width: 100%;
     height: auto;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 .margem-50{
     margin-bottom: 50px;
@@ -535,5 +542,20 @@ display: flex !important;
         padding: 5vh 5vh;
         text-align: center;
     }
+    .livro-sec{
+        display: flex !important;
+        align-items: center !important;
+        justify-items: center !important;
+        text-align: center;
+    }
+    .hero-mobile{
+        display: block;
+        align-items: center;
+        justify-items: center;
 
+        text-align: center;
+    }
+    .btn-buy{
+        text-align: center !important;
+    }
 }
