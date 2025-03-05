@@ -49,7 +49,7 @@
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: bold;
-
+    
     color: #027071;
 }
 .corpoDoTexto{
@@ -88,7 +88,7 @@
     color: #ffffff;
 }
 .turquesa{
-    color: #027071;
+    color: #027071 !important;
 }
 .texto-dinamico{
     margin-top: 10vh;
@@ -98,6 +98,9 @@
 
     padding-top: 25vh;
     padding-bottom: 25vh;
+    text-align: center;
+}
+.centralizador-texto-workshop{
     text-align: center;
 }
 
@@ -272,6 +275,11 @@ display: flex !important;
 
 /*  Cards  */
 .feature-card {
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+.feature-card-2 {
     padding: 20px;
     border-radius: 10px;
     transition: transform 0.3s;
@@ -557,5 +565,30 @@ display: flex !important;
     }
     .btn-buy{
         text-align: center !important;
+    }
+    .compra-livro {
+        bottom: 5vh;
+    }
+    .feature-card-2 {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-items: start;
+        justify-content: flex-start;
+
+        text-align: start;
+        color: #442A05 !important;
+
+        padding: 20px;
+        border-radius: 10px;
+        transition: transform 0.3s;
+    }
+    .list-workshop{
+        display: flex;
+        align-items: center;
+        justify-items: flex-start;
+    }
+    .centralizador-texto-workshop{
+        text-align: start;
     }
 }
