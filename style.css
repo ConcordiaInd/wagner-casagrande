@@ -530,5 +530,10 @@ display: flex !important;
         margin-left: 0px;
         margin-right: 0px;
     }
+    .box-contato{
+        min-height: 20vh;
+        padding: 5vh 5vh;
+        text-align: center;
+    }
 
 }
